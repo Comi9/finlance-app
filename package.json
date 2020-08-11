@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "lodash": "^4.17.19",
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "xml2js": "^0.4.23"
   }
 }
