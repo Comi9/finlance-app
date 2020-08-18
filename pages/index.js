@@ -33,7 +33,7 @@ export default function Home({ rates }) {
 }
 
 export async function getStaticProps() {
-  let res = await fetch('//finlance.app/api/bnr-rates')
+  let res = await fetch('https://finlance.app/api/bnr-rates')
   console.log(res)
   let response = await fetch('https://www.bnr.ro/files/xml/years/nbrfxrates2020.xml')
   let rates = await response.text()
