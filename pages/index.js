@@ -16,12 +16,6 @@ export default function Home({ rates }) {
         </h1>
         <br /><br />
         FINlance: <BRNrate rates={rates} date="2020-07-27" currency="EUR" />
-        <br />
-        FINlance: <BRNrate rates={rates} date="2020-07-25" currency="EUR" />
-        <br />
-        FINlance: <BRNrate rates={rates} date="2020-07-22" currency="EUR" />
-
-
       </main>
 
       <footer className={styles.footer}>
