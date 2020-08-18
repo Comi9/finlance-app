@@ -6,13 +6,13 @@ export default function Home({ rates }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>FINlance</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://FINlance.app">FINlance</a>
         </h1>
         <br /><br />
         FINlance: <BRNrate rates={rates} date="2020-07-27" currency="EUR" />
