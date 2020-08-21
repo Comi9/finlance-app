@@ -10,9 +10,9 @@ export default function Home({ exchange }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h3 className={styles.title}>
           Welcome to <a href="https://FINlance.app">FINlance</a>
-        </h1>
+        </h3>
         <br /><br />
         FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
       </main>
