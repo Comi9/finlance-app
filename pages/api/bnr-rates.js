@@ -22,7 +22,7 @@ function parseRates(xmlRates, date, currency) {
   const selectedDateRates = find(data, datum => datum.date[0] === date)
   const selectedCurrencyRate = selectedDateRates && find(selectedDateRates.rate, rate => rate.currency[0] === currency.toUpperCase())
 
-  return { currency, date, rate: selectedCurrencyRate.value }
+  return { currency: currency.toUpperCase(), date, rate: selectedCurrencyRate.value }
 }
 
 export default async (req, res) => {
@@ -32,8 +32,10 @@ export default async (req, res) => {
   if (!BNR_DATE_FORMAT_PATTERN.test(date)) res.json({ code: 'DATE_PATTERN_MISMATCH' })
   
   await fetchXMLrates()
-  await parseRates(XML_RATES, date, currency)
+  const a = await parseRates(XML_RATES, date, currency)
+
+  console.log(a)
 
   res.statusCode = 200
-  res.json(await parseRates(XML_RATES, date, currency))
+  res.json({ data: await parseRates(XML_RATES, date, currency) })
 }

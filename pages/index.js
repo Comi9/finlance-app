@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home({ rates }) {
+export default function Home({ exchange }) {
+  console.log(exchange)
   return (
     <div className={styles.container}>
       <Head>
@@ -14,16 +15,13 @@ export default function Home({ rates }) {
           Welcome to <a href="https://FINlance.app">FINlance</a>
         </h1>
         <br /><br />
-        {/* FINlance: {rates.rate} */}
+        FINlance: {exchange.rate}
       </main>
     </div>
   )
 }
 
-// export async function getStaticProps() {
-//   let response = await fetch('http://localhost:3000/api/bnr-rates?date=2020-08-12&currency=eur')
-//   console.log(response)
-//   const rates = await response
-
-//   return { props: { rates } }
-// }
+export async function getStaticProps() {
+  let response = await fetch('https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR')
+  return { props: { exchange: await response.json() } }
+}
