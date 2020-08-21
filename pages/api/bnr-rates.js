@@ -32,10 +32,7 @@ export default async (req, res) => {
   if (!BNR_DATE_FORMAT_PATTERN.test(date)) res.json({ code: 'DATE_PATTERN_MISMATCH' })
   
   await fetchXMLrates()
-  const a = await parseRates(XML_RATES, date, currency)
-
-  console.log(a)
 
   res.statusCode = 200
-  res.json({ data: await parseRates(XML_RATES, date, currency) })
+  res.json(await parseRates(XML_RATES, date, currency))
 }

@@ -2,7 +2,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home({ exchange }) {
-  console.log(exchange)
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +14,7 @@ export default function Home({ exchange }) {
           Welcome to <a href="https://FINlance.app">FINlance</a>
         </h1>
         <br /><br />
-        FINlance: {exchange.rate}
+        FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
       </main>
     </div>
   )
