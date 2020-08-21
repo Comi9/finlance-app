@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import BRNrate from '../components/BRNrate'
 
 export default function Home({ rates }) {
-  console.log(rates)
   return (
     <div className={styles.container}>
       <Head>
@@ -16,14 +14,16 @@ export default function Home({ rates }) {
           Welcome to <a href="https://FINlance.app">FINlance</a>
         </h1>
         <br /><br />
-        FINlance: <BRNrate rates={rates} date="2020-07-27" currency="EUR" />
+        {/* FINlance: {rates.rate} */}
       </main>
     </div>
   )
 }
 
-export async function getStaticProps() {
-  let response = await fetch('https://www.bnr.ro/files/xml/years/nbrfxrates2020.xml')
-  let rates = await response.text()
-  return { props: { rates } }
-}
+// export async function getStaticProps() {
+//   let response = await fetch('http://localhost:3000/api/bnr-rates?date=2020-08-12&currency=eur')
+//   console.log(response)
+//   const rates = await response
+
+//   return { props: { rates } }
+// }
