@@ -15,6 +15,8 @@ export default function Home({ exchange }) {
         </h3>
         <br /><br />
         FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
+        <p>github.dev</p>
+        <p>codelabs2</p>
       </main>
     </div>
   )
