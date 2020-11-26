@@ -34,5 +34,5 @@ export default async (req, res) => {
   await fetchXMLrates()
 
   res.statusCode = 200
-  res.json(await parseRates(XML_RATES, date, currency))
+  res.json(await parseRates(XML_RATES, date, currency) || {})
 }

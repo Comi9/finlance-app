@@ -31,5 +31,5 @@ export default function Home({ exchange = 1 }) {
 
 export async function getStaticProps() {
   let response = await fetch(API_PATH)
-  return { props: { exchange: await response.json() } }
+  return response && { props: { exchange: await response.json() } }
 }
