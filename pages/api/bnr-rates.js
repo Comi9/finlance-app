@@ -1,4 +1,4 @@
-import fetch from 'unfetch'
+require('isomorphic-fetch')
 import { parseString } from 'xml2js'
 import { find, map, isEqual, isEmpty } from 'lodash'
 

@@ -2,7 +2,12 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { version } from "../package.json"
 
-export default function Home({ exchange }) {
+const API_PATH = process.env.NODE_ENV === 'development'
+  ? 'http://localhost:3000/api/bnr-rates?date=2020-05-12&currency=EUR'
+  : 'https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR'
+
+export default function Home({ exchange = 1 }) {
+  console.log('eee', process.env.NODE_ENV)
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +21,7 @@ export default function Home({ exchange }) {
         </h3>
         <h3 className={styles.title}>{version}</h3>
         <br /><br />
-        {/* FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date} */}
+        FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
         <p>github.dev</p>
         <p>codelabs2</p>
       </main>
@@ -24,7 +29,7 @@ export default function Home({ exchange }) {
   )
 }
 
-// export async function getStaticProps() {
-//   let response = await fetch('https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR')
-//   return { props: { exchange: await response.json() } }
-// }
+export async function getStaticProps() {
+  let response = await fetch(API_PATH)
+  return { props: { exchange: await response.json() } }
+}
