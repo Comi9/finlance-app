@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 
-function FinLanceApp({ Component, pageProps }) {
+function FINlanceApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default FinLanceApp
+export default FINlanceApp
