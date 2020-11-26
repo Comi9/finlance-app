@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { version } from "../package.json"
 
 export default function Home({ exchange }) {
   return (
@@ -13,8 +14,9 @@ export default function Home({ exchange }) {
         <h3 className={styles.title}>
           Welcome to <a href="https://FINlance.app">FINlance</a>
         </h3>
+        <h3 className={styles.title}>{version}</h3>
         <br /><br />
-        FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
+        {/* FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date} */}
         <p>github.dev</p>
         <p>codelabs2</p>
       </main>
@@ -22,7 +24,7 @@ export default function Home({ exchange }) {
   )
 }
 
-export async function getStaticProps() {
-  let response = await fetch('https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR')
-  return { props: { exchange: await response.json() } }
-}
+// export async function getStaticProps() {
+//   let response = await fetch('https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR')
+//   return { props: { exchange: await response.json() } }
+// }
