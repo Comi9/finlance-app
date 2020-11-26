@@ -21,16 +21,14 @@ export default function Home({ exchange = 1 }) {
         </h3>
         <h3 className={styles.title}>{version}</h3>
         <br /><br />
-        FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
-        <p>github.dev</p>
-        <p>codelabs2</p>
+        {/* FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date} */}
       </main>
     </div>
   )
 }
 
-export async function getStaticProps() {
-  let response = await fetch(API_PATH)
-  if (!response) return {}
-  return { props: { exchange: await response.json() } }
-}
+// export async function getStaticProps() {
+//   let response = await fetch(API_PATH)
+//   console.log('response', response.json())
+//   return { props: { exchange: await response.json() } }
+// }
