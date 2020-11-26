@@ -7,7 +7,7 @@ const API_PATH = process.env.NODE_ENV === 'development'
   : 'https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR'
 
 export default function Home({ exchange = 1 }) {
-  console.log('eee', process.env.NODE_ENV,  process.env.customKey && process.env.customKey)
+  console.log(process.env.NODE_ENV)
   return (
     <div className={styles.container}>
       <Head>
