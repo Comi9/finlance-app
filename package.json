@@ -9,6 +9,7 @@
     "release": "standard-version"
   },
   "dependencies": {
+    "isomorphic-fetch": "^3.0.0",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
