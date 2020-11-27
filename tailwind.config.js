@@ -1,15 +1,11 @@
 module.exports = {
   purge: [],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [
-    // require('postcss-import'),
-    // require('tailwindcss'),
-    // require('autoprefixer'),
-  ],
+  plugins: [],
 }
