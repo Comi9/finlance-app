@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.224](https://github.com/Comi9/finlance-app/compare/v1.0.223...v1.0.224) (2020-11-27)
+
 ### [1.0.223](https://github.com/Comi9/finlance-app/compare/v1.0.222...v1.0.223) (2020-11-27)
 
 ### [1.0.222](https://github.com/Comi9/finlance-app/compare/v1.0.221...v1.0.222) (2020-11-26)
