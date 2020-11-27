@@ -61,14 +61,16 @@ export default function Home({ exchange = 1 }) {
                 Sign in
               </button>
             </div>
+
+            <div className="mt-6">
+              <small>
+                <pre><strong>Version: </strong>{version}</pre>
+                <pre><strong>Release: </strong>{process.env.revision}</pre>
+              </small>
+            </div>
           </form>
         </div>
       </div>
-
-      <div>
-        <pre><strong>Version: </strong>{version}</pre>
-        <pre><strong>Release: </strong>{process.env.revision}</pre>
-      </div>  
     </>
   )
 }
