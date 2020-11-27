@@ -11,7 +11,8 @@ export default function Home({ exchange = 1 }) {
       <Head>
         <title>FINlance</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width"/>
+        <meta charSet="utf-8"/>
       </Head>
 
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
