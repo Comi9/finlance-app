@@ -15,50 +15,6 @@ export default function Home({ exchange = 1 }) {
         <meta charSet="utf-8"/>
       </Head>
 
-
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-10">
-  <div className="md:flex">
-    <div className="md:flex-shrink-0">
-      <img className="h-48 w-full object-cover md:w-48" src="https://images.unsplash.com/photo-1515711660811-48832a4c6f69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Man looking at item at a store" />
-    </div>
-    <div className="p-8">
-      <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Case study</div>
-      <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Finding customers for your new business</a>
-      <p className="mt-2 text-gray-500">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
-    </div>
-  </div>
-</div>
-
-      <div>
-  <div className="sm:hidden">
-    <label htmlFor="tabs" className="sr-only">Select a tab</label>
-    <select id="tabs" className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-      <option>My Account</option>
-      <option>Company</option>
-      <option selected>Team Members</option>
-      <option>Billing</option>
-    </select>
-  </div>
-  <div className="hidden sm:block">
-    <div className="border-b border-gray-200">
-      <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-        <a href="#" className="whitespace-nowrap py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-          My Account
-        </a>
-        <a href="#" className="whitespace-nowrap py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-          Company
-        </a>
-        <a href="#" className="whitespace-nowrap py-4 px-1 border-b-2 border-indigo-500 font-medium text-sm text-indigo-600" aria-current="page">
-          Team Members
-        </a>
-        <a href="#" className="whitespace-nowrap py-4 px-1 border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
-          Billing
-        </a>
-      </nav>
-    </div>
-  </div>
-</div>
-
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
