@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/styles.css'
 
 function FINlanceApp({ Component, pageProps }) {
   return <Component {...pageProps} />
