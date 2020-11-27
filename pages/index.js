@@ -18,10 +18,11 @@ export default function Home({ exchange = 1 }) {
         <h3 className={styles.title}>
           Welcome to <a href="https://FINlance.app">FINlance</a>
         </h3>
-        <h3 className={styles.title}>{version}</h3>
         <br /><br />
         FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
-        <div><pre>{process.env.revision}</pre></div>
+        <div>
+          <pre><strong>Version: </strong>{version}</pre>
+          <pre><strong>Release: </strong>{process.env.revision}</pre></div>
       </main>
     </div>
   )
@@ -30,7 +31,5 @@ export default function Home({ exchange = 1 }) {
 export async function getStaticProps() {
   let response = await fetch(API_PATH)
   const w = await response.json();
-  console.log(w)
-  // return { props: { exchange: e } }
   return { props: { exchange: w } }
 }
