@@ -7,7 +7,6 @@ const API_PATH = process.env.NODE_ENV === 'development'
   : 'https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR'
 
 export default function Home({ exchange = 1 }) {
-  console.log(process.env.NODE_ENV)
   return (
     <div className={styles.container}>
       <Head>
@@ -22,6 +21,7 @@ export default function Home({ exchange = 1 }) {
         <h3 className={styles.title}>{version}</h3>
         <br /><br />
         FINlance: 1 RON = {exchange.rate} {exchange.currency} / {exchange.date}
+        <div><pre>{process.env.revision}</pre></div>
       </main>
     </div>
   )
