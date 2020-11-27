@@ -1,8 +1,5 @@
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.js',
-  ],
+  purge: [],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {},
@@ -11,9 +8,8 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    // require('tailwindcss/forms')
+    // require('postcss-import'),
+    // require('tailwindcss'),
+    // require('autoprefixer'),
   ],
 }
