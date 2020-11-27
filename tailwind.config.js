@@ -1,6 +1,6 @@
 module.exports = {
   purge: [
-
+    './src/**/*.js'
   ],
   darkMode: 'media',
   theme: {
@@ -10,6 +10,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms')
+
   ],
 }
