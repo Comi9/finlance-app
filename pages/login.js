@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { signIn, signOut, useSession } from 'next-auth/client'
 import { version } from "../package.json"
 
 const API_PATH = process.env.NODE_ENV === 'development'
@@ -6,17 +7,26 @@ const API_PATH = process.env.NODE_ENV === 'development'
   : 'https://finlance.app/api/bnr-rates?date=2020-05-12&currency=EUR'
 
 export default function Home({ exchange = 1 }) {
+  const [session, loading] = useSession()
   return (
     <>
       <Head>
         <title>FINlance</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width"/>
-        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <meta charSet="utf-8" />
       </Head>
 
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
+          {!session && <>
+            Not signed in <br />
+            <button onClick={signIn}>Sign in</button>
+          </>}
+          {session && <>
+            Signed in as {session.user.email} <br />
+            <button onClick={signOut}>Sign out</button>
+          </>}
           <div>
             <img className="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">FINlance</h2>
