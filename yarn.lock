@@ -4441,9 +4441,9 @@ node-releases@^1.1.65, node-releases@^1.1.66:
   integrity sha512-V5QF9noGFl3EymEwUYzO+3NTDpGfQB4ve6Qfnzf3UNydMhjQRVPR1DZTuvWiLzaFJYw2fmDwAfnRNEVb64hSIg==
 
 nodemailer@^6.4.16:
-  version "6.4.18"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.18.tgz#2788c85792844fc17befda019031609017f4b9a1"
-  integrity sha512-ht9cXxQ+lTC+t00vkSIpKHIyM4aXIsQ1tcbQCn5IOnxYHi81W2XOaU66EQBFFpbtzLEBTC94gmkbD4mGZQzVpA==
+  version "6.9.14"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.9.14.tgz#845fda981f9fd5ac264f4446af908a7c78027f75"
+  integrity sha512-Dobp/ebDKBvz91sbtRKhcznLThrKxKt97GI2FAlAyy+fk19j73Uz3sBXolVtmcXjaorivqsbbbjDY+Jkt4/bQA==
 
 noop-logger@^0.1.1:
   version "0.1.1"
